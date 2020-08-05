@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown Timer</title>
+</head>
+<body>
+	<p id="outp">Countdown<br></p>
+	<script>
+		function addNumToP(num){
+			document.getElementById("outp").innerHTML += " " + num;
+		}
+		function sleep(msec){
+			return new Promise(resolve => setTimeout(resolve, msec));
+		}
+		 async function launchTimer(){
+			var count = 10;
+			while(count >= 0){
+				document.getElementById("outp").innerHTML += " " + count + "<br>";
+				await sleep(1000);
+				count--;
+			}
+			document.getElementById("outp").innerHTML += " " + "Liftoff!";
+		}
+		launchTimer();
+	</script>
+</body>
+</html>

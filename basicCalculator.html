@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function calcOperands(){
+
+		//Get values from the calculator form.
+		var oper1 = document.getElementById("calcForm").elements.item(0).value;
+			oper1 = parseFloat(oper1, 10); //Convert string to number
+	    var operator = document.getElementById("calcForm").elements.item(1).value;
+	    var oper2 = document.getElementById("calcForm").elements.item(2).value;	    			
+	    	oper2 = parseFloat(oper2, 10); //Convert string to number
+
+	    //Calculate result based on the operator from the calcForm dropdown
+		var result;
+		switch(operator){
+			case "+":
+				result = oper1 + oper2;
+				break;
+			case "-":
+				result = oper1 - oper2;
+				break;
+			case "/":
+				result = oper1 / oper2;
+				break;
+			case "*":
+				result = oper1 * oper2;
+				break;
+		}
+		document.getElementById("resultPar").innerHTML = "Result is: " + result;
+		return false;
+	}
+</script>
+</head>
+
+<body>
+<h3>Basic Calculator</h3>
+<!--Form to gather 2 operands and an operation-->
+<form id="calcForm">
+	<!--Operand 1-->
+  <input type="text" id="quantity1" name="quantity1">
+  	<!--Operation dropbox-->
+  <select id="operations" name="operations">
+  	<option value="+">+</option>
+  	<option value="-">-</option>
+  	<option value="*">*</option>
+  	<option value="/">/</option>
+  </select>
+  	<!--Operand 1-->
+  <input type="text" id="quantity2" name="quantity2"><br><br>
+  <!--Button to calculate results-->
+  <input type="button" value="Calculate" onclick="calcOperands()">
+</form>
+<!--Paragraph that displays results-->
+<p id="resultPar"></p>
+</body>
+</html>
