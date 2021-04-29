@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Branches</title>
+	<script src="branching.js"></script>
+</head>
+
+<body>
+<p id="rs1">Hour 1, </p>
+<p id="rs2">Hour 7, </p>
+<p id="rs3">Hour 13, </p>
+<p id="rs4">Hour 16, </p>
+<p id="rs5">Hour 19, </p>
+<p id="rs6">Hour 22, </p>
+
+<script>
+	document.getElementById("rs1").textContent += getGreeting(1);
+	document.getElementById("rs2").textContent += getGreeting(7);
+	document.getElementById("rs3").textContent += getGreeting(13);
+	document.getElementById("rs4").textContent += getGreeting(16);
+	document.getElementById("rs5").textContent += getGreeting(19);
+	document.getElementById("rs6").textContent += getGreeting(22);
+</script>
+</body>
+</html>

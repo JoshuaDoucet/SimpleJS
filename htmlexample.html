@@ -1,0 +1,29 @@
+<html>
+<head>
+	<!--This is a comment-->
+	<style>
+		body {background-color: rgb(128,128,128);}
+		h1 {color: blue;}
+		p {color: red;}
+		#para1 + #head2 {color: :red;}
+	</style>
+	<script>
+		function updateHeader(){
+			document.getElementById("head1").innerHTML = "LOOK WHAT CHANGED";
+			document.getElementById("par1").style.color = "green";
+		}
+	</script>
+</head>
+
+<body>
+	<h1 id="head1">h1 Header</h1>
+	<p id="par1">This is a paragraph<br>
+		Here are more words in the paragraph.
+	</p>
+	<h2 id="head2">"Header 2"</h2>
+	<button id="but1" type="button" onclick="updateHeader()">
+		Click here
+	</button>
+</body>
+</html>
+

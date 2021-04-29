@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+
+<body>
+<p id="box1">Script Outputs<br><br></p>
+
+<script>
+	//Standard for loop
+	var output = "";
+	var i;
+	for (i = 10; i > 6; i--){
+	  output += "#" + i + "<br>";
+	}
+	//output = “#10<br>#9<br>#8<br>#7<br>”
+	document.getElementById("box1").innerHTML += output + "<br>";
+</script>
+
+<script>
+	//for / in loop
+	var output = "";
+	var student = {first:"Jill", last:"Baker",
+				yob:1997, gpa:3.23};
+	for (index in student){
+		output += student[index] + ", ";
+	}
+	//output = “Jill, Baker, 1997, 3.23”
+	document.getElementById("box1").innerHTML += output + "<br>";
+</script>
+
+<script>
+	var colors = [255000000, "Green", "Blue"];
+	for (color of colors){
+			document.getElementById("box1").innerHTML += "<br>" + color;
+	}
+</script>
+
+</body>
+</html>
